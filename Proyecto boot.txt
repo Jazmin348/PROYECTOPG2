@@ -1,0 +1,63 @@
+#Especificaciones tecnicas del proyecto
+*JAZMIN*
+1. Configuración del Proyecto
+Ve a Spring Initializar y configura el proyecto:
+
+Project: Gradle Project o Maven Project (el que prefieras).
+Language: Java.
+Spring Boot: 3.3.4.
+Packaging: Jar.
+Java: 17.
+Agrega las siguientes dependencias:
+
+Spring Web: para crear controladores REST.
+Spring Data JPA: para interactuar con la base de datos.
+MySQL Driver: para conectar con MySQL.
+Spring Boot DevTools (opcional): para recargar automáticamente en desarrollo.
+Lombok (opcional): para reducir el código boilerplate.
+Descarga el proyecto y ábrelo en tu IDE.
+*BENJAMIN*
+2. Configuración de la Base de Datos
+Crea una base de datos en MySQL llamada telegram_bot.
+*pendiente: definir tablas a usar 
+
+Configura la conexión a la base de datos en el archivo application.properties o application.yml. 
+*ALEJANDRO*
+3. Configuración del Bot de Telegram
+Ve a Telegram y busca el usuario BotFather.
+
+Crea un nuevo bot usando /newbot y sigue las instrucciones.
+
+Obtén el token del bot y guárdalo en una variable de entorno o en el archivo application.properties
+
+*Jazmin*
+4. Crear la Entidad ChatMessage
+Esta entidad representará cada mensaje de chat. Agrega un archivo llamado ChatMessage.java en el paquete model y define la clase con los siguientes
+
+*Benjamin*
+5. Crear el Repositorio ChatMessageRepository
+Define un repositorio para acceder a los datos de mensajes de chat. Crea un archivo llamado ChatMessageRepository.java en el paquete repository
+
+*ALEJANDRO*
+6. Crear el Servicio TelegramBotService
+Este servicio gestionará la lógica para interactuar con la API de OpenAI y el bot de Telegram. Define un archivo TelegramBotService.java en el paquete service
+
+*JAZMIN*
+7. Crear el Controlador TelegramBotController
+Define el controlador que reciba las actualizaciones de Telegram y responda usando el bot de ChatGPT. Crea el archivo TelegramBotController.java en el paquete controller
+
+*BENJAMIN*
+8. Configurar el Webhook de Telegram
+Para que Telegram envíe mensajes a tu API, necesitas configurar un webhook
+
+*ALEJANDRO*
+9. Documentar con Swagger
+Para habilitar Swagger, agrega la dependencia springdoc-openapi-ui al archivo pom.xml o build.gradle. Una vez que el proyecto se ejecute, podrás acceder a la documentación de Swagger en la URL http://localhost:8080/swagger-ui.html.
+
+*TODOS*
+10. Prueba y Verifica
+Con el bot en funcionamiento:
+
+Envía un mensaje a tu bot en Telegram.
+Verifica que el bot responda con la respuesta de ChatGPT.
+Confirma que los mensajes se guarden correctamente en la base de datos MySQL.
